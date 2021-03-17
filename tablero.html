@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero</title>
+</head>
+<body>
+    <script>
+      let size=prompt("introduzca dimensiones del tablero");
+      size = parseInt(size);
+        let n=1, v=0, w=0, horizontal1="X";
+        let n2=1, v2=0, w2=0, horizontal2="O";
+        let n3=1, v3=0, w3=0;
+      
+//necesito un bucle que alterne entre X y O en una misma fila
+//creo un bucle donde se coloca O o X según la posición que ocupen sea par o impar
+    while(v,w<size){
+
+          w=(2*n-1);    v=2*n;  n=n+1;
+
+          for(let i=1; i<size; i=i+1){
+              if(i==w){
+                  horizontal1=horizontal1+"O";
+              }
+              if(i==v){
+                  horizontal1=horizontal1+"X";
+              }
+          }
+    }
+
+//ahora necesito una fila que empiece por X en vez de O, asi que utilizo el de antes pero cambiando esta condicion
+
+    while(v2,w2<size){
+
+w2=(2*n2-1);    v2=2*n2;  n2=n2+1;
+
+for(let i2=1; i2<size; i2=i2+1){
+    if(i2==w2){
+        horizontal2=horizontal2+"X";
+    }
+    if(i2==v2){
+        horizontal2=horizontal2+"O";
+    }
+}
+}
+
+console.log(horizontal2);
+
+//Por último, utilizo la misma estructura de bucle para alternar entre una fila y otra
+
+while(v3,w3<=size){
+
+w3=(2*n3-1);    v3=2*n3;  n3=n3+1;
+
+for(let i3=1; i3<size; i3=i3+1){
+    if(i3==w3){
+        console.log(horizontal1);
+    }
+    if(i3==v3){
+        console.log(horizontal2);
+    }
+}
+}
+
+    </script>
+</body>
+</html>
